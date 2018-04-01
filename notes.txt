@@ -1,0 +1,21 @@
+Notes
+
+- Don't imitate, UNDERSTAND!
+
+- You can write (imitated) code, but do you really understand what the code is doing? 
+
+- Don't just write code, read code!
+
+- Look under the hood to see whats really happening 
+
+- Node, V8 engine is written in C++ and what does node add to that engine to make node node
+
+- The better you know javascript, the better you'll be able to write quality code 
+
+Command Line Interface: 
+	- a utility to type commands to your computer rather than clicking
+		a. Bash on Linux
+		b. Terminal on mac
+		c. cmd prompt on windows 
+
+- 
