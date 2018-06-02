@@ -1,0 +1,44 @@
+# networking 
+
+servers, clients and protocols
+
+Any networked computer can be a server 
+
+Any networked computer can be a client 
+
+
+TCP - payloads sent return acknowledgements 
+
+UDP - unreliable transport: packets are sent but there is no confirmation that the packet was received at the other end
+
+Ports
+20 - ftp (data port)
+21 - ftp (control port)
+22 - ssh (secure shell) 
+25 - smtp (email)
+80 - http 
+443 - https
+3306 - mysql
+5432 - pgsql 
+5984 - couchdb
+6667 - irc 
+
+
+# port and permissions 
+nc -lp 1024
+
+
+# server role 
+ Whenever a computer is 'listening' to serve a connection 
+
+# client role
+ computers that connect to servers, initiate connection 
+
+# [peer to peer] 
+ Aside from servers and clients, there is a third role in computer networks: peer. In a peer to peer network, clients establish connections directly to other clients. Nodes in the network are symmetric with no fixed central serveers.
+
+Examples of peer to peer protocols:
+	* bittorrent
+	* webrtc
+
+
