@@ -5,6 +5,7 @@ var url = 'http://mylogger.io/log';
 
 class Logger extends EventEmitter {
 
+    // the function key word is not needed inside of classes, hence it is dropped
     log(messageLogged) {
         console.log(messageLogged); 
 
