@@ -9,10 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "underscore": "^1.9.1"
-  },
   "dependencies": {
-    "mongoose": "^5.1.4"
+    "mongoose": "^5.1.4",
+    "underscore": "^1.9.1"
   }
 }
