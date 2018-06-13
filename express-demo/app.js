@@ -2,8 +2,7 @@ const express = require('express');
 
 const app = express(); 
 
-// middleware 
-app.use(express.json()); 
+const Joi = require('joi');
 
 // courses api
 const courses = [
@@ -11,6 +10,9 @@ const courses = [
     {id: 2, name: 'course2'},
     {id: 3, name: 'course3'},
 ]; 
+
+// middleware 
+app.use(express.json()); 
 
 // routes => 
 app.get('/', (req, res) => { 
@@ -29,6 +31,17 @@ app.get('/api/courses/:id', (req, res) => {
 
 // POST Request 
 app.post('/api/courses', (req, res) => { 
+    const schema = {
+        name: Joi.string().min(3).required()
+    }; 
+
+    const result = Joi.validate(req.body.schema);
+
+    if(result.error) {
+        // 400 Bad Request
+        res.status(400).send(result.error.details[0].message); 
+        return; 
+    }
     const course = {
         id: courses.length + 1, 
         name: req.body.name
