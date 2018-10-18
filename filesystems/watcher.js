@@ -5,4 +5,4 @@ fs.watch('target.txt', function() {
 }); 
 console.log("Now watching target.txt for changes!"); 
 
-
+// node is great! 
