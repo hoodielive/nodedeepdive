@@ -17,7 +17,7 @@ Why?
   - we can compose streaming abstractions (cs)
   - we can operatre on data chunk by chunk 
 
-Composition 
+Composition: 
   - Just like how in unix we can pipe commands together: 
     $ <mobydick.txt.gz gunzip | sed -r 's/\s+/\n/g' | grep -i whale | wc -l 
 
@@ -27,3 +27,10 @@ Composition
     .pipe(replace(/\s+/g, '\n'))
     .pipe(fileter(/whale/i))
     .pipe(linecount(console.log))
+
+* these are synchronous - buffers/chunks 
+
+const fs = require('fs')
+
+fs.createReadStream(process.argv[2])
+  .pipe(process.stdout)
