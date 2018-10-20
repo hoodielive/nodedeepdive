@@ -1,3 +1,8 @@
+const fs = require('fs');
+const spawn = require('child_process').spawn; 
+const filename = process.argv[2]; 
+
+
 fs.watch(filename, function() {
   let 
      ls = spawn('ls', ['-lh', filename]), output = ''; 
